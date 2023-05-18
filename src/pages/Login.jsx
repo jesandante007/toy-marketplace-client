@@ -1,9 +1,11 @@
 import React from "react";
 import img from "../assets/images/image.png";
+import { FaGoogle, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-10 items-center my-16">
       <div>
         <img src={img} />
       </div>
@@ -31,9 +33,23 @@ const Login = () => {
             />
             <span className="text-base">Remember me</span>
           </div>
-          <input type="submit" value="Login" className="w-full h-14 text-xl my-btn rounded-xl" />
-          <div className="divider">or</div>
+          <input
+            type="submit"
+            value="Login"
+            className="w-full h-14 text-xl my-btn rounded-xl"
+          />
+          <p className="text-center">Forgot password?<a className="link ml-1">reset</a></p>
+          <div className="divider py-7">or</div>
         </form>
+        <button className="w-full h-14 rounded-xl my-btn normal-case text-xl flex items-center justify-center gap-3">
+          <FaGoogle className="w-10 h-10 p-2 rounded-full text-tdeep bg-gradient-to-br from-bdeep to-blight" />
+          <span>Continue With Google</span>
+        </button>
+        <button className="w-full h-14 rounded-xl my-btn normal-case text-xl flex items-center justify-center gap-3">
+          <FaGithub className="w-10 h-10 p-2 rounded-full text-tdeep bg-gradient-to-br from-bdeep to-blight" />
+          <span>Continue With Github</span>
+        </button>
+        <p className="link text-center pt-10"><Link to='/register'>Don't have an account? Sign Up</Link></p>
       </div>
     </div>
   );
