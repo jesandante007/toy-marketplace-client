@@ -1,0 +1,74 @@
+[
+  {
+    "seller": "Toyland Traders",
+    "name": "Speedy Sports Car",
+    "category": "Sports Car",
+    "price": 19.99,
+    "availableQuantity": 5,
+    "details": "Zoom around with this sleek and fast sports car toy! Perfect for racing enthusiasts of all ages."
+  },
+  {
+    "seller": "Raceway Retailers",
+    "name": "Supercharged Supercar",
+    "category": "Sports Car",
+    "price": 29.99,
+    "availableQuantity": 8,
+    "details": "Unleash the power of this supercharged toy sports car on the track! Built for speed and performance."
+  },
+  {
+    "seller": "Extreme Motors",
+    "name": "Off-Road Monster",
+    "category": "Sports Car",
+    "price": 24.99,
+    "availableQuantity": 3,
+    "details": "Conquer any terrain with this rugged off-road monster sports car toy! Equipped with durable wheels and suspension."
+  },
+  {
+    "seller": "Miniature Motors",
+    "name": "Monster Truck Madness",
+    "category": "Truck",
+    "price": 24.99,
+    "availableQuantity": 3,
+    "details": "Experience the thrill of crushing obstacles with this powerful monster truck toy! It's perfect for off-road adventures."
+  },
+  {
+    "seller": "Mighty Haulers",
+    "name": "Gigantic Hauler",
+    "category": "Truck",
+    "price": 34.99,
+    "availableQuantity": 6,
+    "details": "Transport heavy loads with this massive and sturdy toy hauler truck! It has a spacious bed for carrying various items."
+  },
+  {
+    "seller": "Tough Trucks",
+    "name": "Mud Crusher",
+    "category": "Truck",
+    "price": 18.99,
+    "availableQuantity": 4,
+    "details": "Navigate through muddy terrains with this rugged mud crusher truck toy! Its oversized tires provide excellent traction."
+  },
+  {
+    "seller": "Firefighter Fun",
+    "name": "Mini Fire Truck",
+    "category": "Fire Truck",
+    "price": 12.99,
+    "availableQuantity": 8,
+    "details": "Ignite the imagination with this mini fire truck toy! Comes with flashing lights and realistic sound effects."
+  },
+  {
+    "seller": "Rescue Heroes",
+    "name": "Rescue Brigade",
+    "category": "Fire Truck",
+    "price": 21.99,
+    "availableQuantity": 5,
+    "details": "Race to the rescue with this fully equipped rescue brigade fire truck toy! It features extendable ladders and a water cannon."
+  },
+  {
+    "seller": "Fire Chief Toys",
+    "name": "Fire Chief Cruiser",
+    "category": "Fire Truck",
+    "price": 15.99,
+    "availableQuantity": 7,
+    "details": "Lead the firefighting efforts with this fire chief cruiser toy! Includes a detachable roof and firefighting accessories."
+  }
+]

@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-btn {
+  @apply text-[#ffffffcc] normal-case bg-gradient-to-tr from-[#65dfc9] to-[#6cdbeb];
+}
