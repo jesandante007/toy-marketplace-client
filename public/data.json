@@ -5,7 +5,14 @@
     "category": "Sports Car",
     "price": 19.99,
     "availableQuantity": 5,
-    "details": "Zoom around with this sleek and fast sports car toy! Perfect for racing enthusiasts of all ages."
+    "image": "https://i.ibb.co/JFzLLGY/car-1.jpg",
+    "features": [
+      "Sleek and aerodynamic design",
+      "High-speed performance on the track",
+      "Realistic engine sounds",
+      "Working headlights and taillights",
+      "Easy-to-use remote control"
+    ]
   },
   {
     "seller": "Raceway Retailers",
@@ -13,7 +20,14 @@
     "category": "Sports Car",
     "price": 29.99,
     "availableQuantity": 8,
-    "details": "Unleash the power of this supercharged toy sports car on the track! Built for speed and performance."
+    "image": "https://i.ibb.co/cTmMCTT/car-2.jpg",
+    "features": [
+      "Powerful supercharged engine",
+      "Speeds up to 200 mph",
+      "Premium metallic paint finish",
+      "Responsive handling and precise control",
+      "Durable construction for long-lasting enjoyment"
+    ]
   },
   {
     "seller": "Extreme Motors",
@@ -21,7 +35,14 @@
     "category": "Sports Car",
     "price": 24.99,
     "availableQuantity": 3,
-    "details": "Conquer any terrain with this rugged off-road monster sports car toy! Equipped with durable wheels and suspension."
+    "image": "https://i.ibb.co/K7q2Fcm/car-4.jpg",
+    "features": [
+      "Rugged off-road capabilities",
+      "Large, knobby tires for superior traction",
+      "High ground clearance for obstacle clearance",
+      "Full suspension system for a smooth ride",
+      "Waterproof and all-terrain design"
+    ]
   },
   {
     "seller": "Miniature Motors",
@@ -29,7 +50,14 @@
     "category": "Truck",
     "price": 24.99,
     "availableQuantity": 3,
-    "details": "Experience the thrill of crushing obstacles with this powerful monster truck toy! It's perfect for off-road adventures."
+    "image": "https://i.ibb.co/V3cW1QG/truck-1.jpg",
+    "features": [
+      "Giant monster truck wheels for off-road dominance",
+      "Crushes obstacles with ease",
+      "Lifelike monster truck design",
+      "Realistic engine revving sound effects",
+      "Long-range remote control for extended play"
+    ]
   },
   {
     "seller": "Mighty Haulers",
@@ -37,7 +65,14 @@
     "category": "Truck",
     "price": 34.99,
     "availableQuantity": 6,
-    "details": "Transport heavy loads with this massive and sturdy toy hauler truck! It has a spacious bed for carrying various items."
+    "image": "https://i.ibb.co/RBtYJBT/truck-4.jpg",
+    "features": [
+      "Massive size for hauling large items",
+      "Detachable trailer for versatile play",
+      "Sturdy construction for heavy-duty use",
+      "Realistic loading and unloading action",
+      "Detailed interior and exterior design"
+    ]
   },
   {
     "seller": "Tough Trucks",
@@ -45,7 +80,14 @@
     "category": "Truck",
     "price": 18.99,
     "availableQuantity": 4,
-    "details": "Navigate through muddy terrains with this rugged mud crusher truck toy! Its oversized tires provide excellent traction."
+    "image": "https://i.ibb.co/kKXX0JC/truck-6.jpg",
+    "features": [
+      "Aggressive off-road tires for mud-slinging action",
+      "High-torque motor for tackling tough terrain",
+      "Raised suspension for enhanced ground clearance",
+      "Waterproof electronics for all-weather play",
+      "Durable and impact-resistant body"
+    ]
   },
   {
     "seller": "Firefighter Fun",
@@ -53,7 +95,14 @@
     "category": "Fire Truck",
     "price": 12.99,
     "availableQuantity": 8,
-    "details": "Ignite the imagination with this mini fire truck toy! Comes with flashing lights and realistic sound effects."
+    "image": "https://i.ibb.co/QNgTrKL/fire-truck-1.jpg",
+    "features": [
+      "Authentic fire truck design with vibrant colors",
+      "Flashing lights and realistic siren sounds",
+      "Extendable ladder for pretend rescue missions",
+      "Removable hose for interactive play",
+      "Easy-to-use controls for young aspiring firefighters"
+    ]
   },
   {
     "seller": "Rescue Heroes",
@@ -61,7 +110,14 @@
     "category": "Fire Truck",
     "price": 21.99,
     "availableQuantity": 5,
-    "details": "Race to the rescue with this fully equipped rescue brigade fire truck toy! It features extendable ladders and a water cannon."
+    "image": "https://i.ibb.co/FHP6K2n/fire-truck-3.jpg",
+    "features": [
+      "Fully equipped with rescue accessories",
+      "Working water cannon for simulated firefighting",
+      "Extendable and rotatable ladder for versatile rescue operations",
+      "Realistic emergency lights and sound effects",
+      "Detailed interior with seating for rescue team figures"
+    ]
   },
   {
     "seller": "Fire Chief Toys",
@@ -69,6 +125,13 @@
     "category": "Fire Truck",
     "price": 15.99,
     "availableQuantity": 7,
-    "details": "Lead the firefighting efforts with this fire chief cruiser toy! Includes a detachable roof and firefighting accessories."
+    "image": "https://i.ibb.co/GH9fFLm/fire-truck-4.jpg",
+    "features": [
+      "Fire chief-themed design with official insignia",
+      "Opening doors for easy figure access",
+      "Removable roof for interior access",
+      "Built-in storage compartments for firefighting gear",
+      "Realistic engine sounds and horn"
+    ]
   }
 ]

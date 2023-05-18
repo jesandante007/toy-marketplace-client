@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import { Link } from "react-router-dom";
 import ActiveLink from "../ActiveLink";
-import logo from '../../assets/logo.png'
+import logo from "../../assets/car.png";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -14,9 +14,32 @@ const Header = () => {
       .catch((error) => console.log(error.message));
   };
 
+  const navItem = (
+    <>
+      <li>
+        <ActiveLink to="/">Home</ActiveLink>
+      </li>
+      {user ? (
+        <>
+          <li>
+            <ActiveLink to="/myToys">My Toys</ActiveLink>
+          </li>
+          <li>
+            <ActiveLink to="/addToy">Add A Toy</ActiveLink>
+          </li>
+        </>
+      ) : (
+        ""
+      )}
+      <li>
+        <ActiveLink to="/blog">Blog</ActiveLink>
+      </li>
+    </>
+  );
+
   return (
     <div>
-      <div className="navbar bg-gradient-to-br from-bdeep to-blight backdrop-blur-2xl rounded-lg">
+      <div className="navbar my-bg">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -39,31 +62,23 @@ const Header = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-gradient-to-br from-bdeep to-blight backdrop-blur-2xl rounded-box w-52"
             >
-              <li>
-                <ActiveLink to="/">Home</ActiveLink>
-              </li>
-              <li>
-                <ActiveLink to="/blog">Blog</ActiveLink>
-              </li>
+              {navItem}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-2xl text-tdeep font-semibold">
+          <Link className="flex items-center gap-1 text-2xl text-tdeep font-semibold">
             <img src={logo} alt="" className="h-12 rounded-full" />
-            TurboToyGarage</a>
+            <span>TurboToyGarage</span>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <ActiveLink to="/">Home</ActiveLink>
-            </li>
-            <li>
-              <ActiveLink to="/blog">Blog</ActiveLink>
-            </li>
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navItem}</ul>
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="dropdown dropdown-end tooltip tooltip-bottom" data-tip={user.displayName}>
+            <div
+              className="dropdown dropdown-end tooltip tooltip-bottom"
+              data-tip={user.displayName}
+            >
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full ring-2 ring-info ring-offset-base-100 ring-offset-2">
                   <img src={user ? user.photoURL : ""} />

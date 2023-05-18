@@ -5,3 +5,7 @@
 .my-btn {
   @apply text-[#ffffffcc] normal-case bg-gradient-to-tr from-[#65dfc9] to-[#6cdbeb];
 }
+
+.my-bg {
+  @apply bg-gradient-to-br from-bdeep to-blight rounded-lg;
+}
