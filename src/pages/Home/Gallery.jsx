@@ -8,6 +8,7 @@ import img6 from "../../assets/cars/truck-5.jpeg";
 import img7 from "../../assets/cars/fire-truck-1.jpeg";
 import img8 from "../../assets/cars/fire-truck-2.jpeg";
 import img9 from "../../assets/cars/fire-truck-5.jpg";
+import GalleryImg from "../../components/GalleryImg";
 
 const Gallery = () => {
   return (
@@ -16,51 +17,15 @@ const Gallery = () => {
         Gallery
       </p>
       <div className="my-bg grid grid-cols-1 lg:grid-cols-3 gap-10 p-10 lg:p-20">
-        <img
-          src={img1}
-          alt="gallery image 1"
-          className="rounded-lg w-full h-full shadow-md"
-        />
-        <img
-          src={img2}
-          alt="gallery image 2"
-          className="rounded-lg w-full h-full shadow-md"
-        />
-        <img
-          src={img3}
-          alt="gallery image 3"
-          className="rounded-lg w-full h-full shadow-md"
-        />
-        <img
-          src={img4}
-          alt="gallery image 4"
-          className="rounded-lg w-full h-full shadow-md"
-        />
-        <img
-          src={img5}
-          alt="gallery image 5"
-          className="rounded-lg w-full h-full shadow-md"
-        />
-        <img
-          src={img6}
-          alt="gallery image 6"
-          className="rounded-lg w-full h-full shadow-md"
-        />
-        <img
-          src={img7}
-          alt="gallery image 7"
-          className="rounded-lg w-full h-full shadow-md"
-        />
-        <img
-          src={img8}
-          alt="gallery image 8"
-          className="rounded-lg w-full h-full shadow-md"
-        />
-        <img
-          src={img9}
-          alt="gallery image 9"
-          className="rounded-lg w-full h-full shadow-md"
-        />
+        <GalleryImg img={img1} title={'Sports Car'} />
+        <GalleryImg img={img2} title={'Sports Car'} />
+        <GalleryImg img={img3} title={'Sports Car'} />
+        <GalleryImg img={img4} title={'Truck'} />
+        <GalleryImg img={img5} title={'Heavy Truck'} />
+        <GalleryImg img={img6} title={'Heavy Truck'} />
+        <GalleryImg img={img7} title={'Fire Truck'} />
+        <GalleryImg img={img8} title={'Fire Truck'} />
+        <GalleryImg img={img9} title={'Fire Truck'} />
       </div>
     </>
   );

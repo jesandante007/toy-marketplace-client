@@ -19,6 +19,9 @@ const Header = () => {
       <li>
         <ActiveLink to="/">Home</ActiveLink>
       </li>
+      <li>
+        <ActiveLink to='/allToys'>All Toys</ActiveLink>
+      </li>
       {user ? (
         <>
           <li>
@@ -38,8 +41,8 @@ const Header = () => {
   );
 
   return (
-    <div>
-      <div className="navbar my-bg">
+    <div className="my-bg">
+      <div className="navbar container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

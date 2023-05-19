@@ -5,9 +5,11 @@ import Footer from "../components/shared/Footer";
 
 const Main = () => {
   return (
-    <div className="container mx-auto font-poppins text-tlight">
+    <div className="font-poppins text-tlight">
       <Header />
-      <Outlet />
+      <div className="container mx-auto">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

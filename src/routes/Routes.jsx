@@ -4,27 +4,48 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ErrorPage from "../pages/ErrorPage";
+import ToyDetails from "../pages/ToyDetails";
+import PrivateRoute from "./PrivateRoute";
+import AllToys from "../pages/AllToys";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main />,
-        errorElement: <ErrorPage />,
-        children: [
-            {
-                path: '/',
-                element: <Home />
-            },
-            {
-                path: 'login',
-                element: <Login />
-            },
-            {
-                path: 'register',
-                element: <Register />
-            }
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <Main />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
+      },
+      {
+        path: "allToys",
+        element: <AllToys />,
+        loader: () =>
+          fetch("https://toy-marketplace-server-ten.vercel.app/toys"),
+      },
+      {
+        path: "/toyDetails/:id",
+        element: (
+          <PrivateRoute>
+            <ToyDetails />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://toy-marketplace-server-ten.vercel.app/toyDetails/${params.id}`
+          ),
+      },
+    ],
+  },
+]);
 
-export default router
+export default router;
