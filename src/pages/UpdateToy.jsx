@@ -1,11 +1,23 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import img from "../assets/images/addToy.png";
+import { useLoaderData } from "react-router-dom";
 
-const AddToy = () => {
+const UpdateToy = () => {
   const { user } = useContext(AuthContext);
+  const toy = useLoaderData();
+  const {
+    _id,
+    name,
+    category,
+    price,
+    rating,
+    availableQuantity,
+    image,
+    features,
+  } = toy;
 
-  const handleAddToy = (event) => {
+  const handleUpdate = (event) => {
     event.preventDefault();
     const form = event.target;
     const seller = user.displayName ? user.displayName : form.seller.value;
@@ -30,8 +42,8 @@ const AddToy = () => {
       features,
     };
 
-    fetch("https://toy-marketplace-server-ten.vercel.app/toys", {
-      method: "POST",
+    fetch(`https://toy-marketplace-server-ten.vercel.app/toyUpdate/${_id}`, {
+      method: "PATCH",
       headers: {
         "content-type": "application/json",
       },
@@ -40,18 +52,17 @@ const AddToy = () => {
       .then((res) => res.json())
       .then((data) => console.log(data));
   };
-
   return (
     <div className="my-bg grid grid-cols-1 lg:grid-cols-[1fr_2fr] items-center">
       <div>
         <img src={img} className="rounded-xl" />
       </div>
       <form
-        onSubmit={handleAddToy}
+        onSubmit={handleUpdate}
         className="p-10 lg:p-24 rounded-xl space-y-6"
       >
         <p className="text-center mb-10 text-4xl font-semibold text-tdeep">
-          Add New Toy
+          Update Toy Info
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="w-full">
@@ -82,6 +93,7 @@ const AddToy = () => {
               className="px-5 h-14 rounded-xl w-full mt-1"
               type="text"
               name="name"
+              defaultValue={name}
               placeholder="Sports Car F1"
             />
           </div>
@@ -90,6 +102,7 @@ const AddToy = () => {
             <select
               className="select w-full px-5 h-14 rounded-xl mt-1"
               name="category"
+              defaultValue={category}
             >
               <option>Sports Car</option>
               <option>Truck</option>
@@ -104,6 +117,7 @@ const AddToy = () => {
               className="px-5 h-14 rounded-xl w-full mt-1"
               type="number"
               name="price"
+              defaultValue={price}
               placeholder="$20.00"
             />
           </div>
@@ -113,6 +127,7 @@ const AddToy = () => {
               className="px-3 h-14 rounded-xl w-full mt-1"
               type="text"
               name="rating"
+              defaultValue={rating}
               placeholder="4.5"
             />
           </div>
@@ -124,6 +139,7 @@ const AddToy = () => {
               className="px-5 h-14 rounded-xl w-full mt-1"
               type="number"
               name="availableQuantity"
+              defaultValue={availableQuantity}
               placeholder="10"
             />
           </div>
@@ -133,6 +149,7 @@ const AddToy = () => {
               className="px-3 h-14 rounded-xl w-full"
               type="url"
               name="image"
+              defaultValue={image}
               placeholder="www.example.com/photo.jpg"
             />
           </div>
@@ -143,17 +160,18 @@ const AddToy = () => {
             className="px-5 h-20 rounded-xl w-full mt-1 resize-none shadow"
             type="number"
             name="features"
+            defaultValue={features.join(".")}
             placeholder="Features Details"
           />
         </div>
         <input
           className="h-14 w-full my-btn text-xl rounded-xl"
           type="submit"
-          value="Add Toy"
+          value="Update Toy"
         />
       </form>
     </div>
   );
 };
 
-export default AddToy;
+export default UpdateToy;

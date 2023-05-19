@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import AllToys from "../pages/AllToys";
 import AddToy from "../pages/AddToy";
 import MyToys from "../pages/MyToys";
+import UpdateToy from "../pages/UpdateToy";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,18 @@ const router = createBrowserRouter([
             <AddToy />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "updateToy/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateToy />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://toy-marketplace-server-ten.vercel.app/toyDetails/${params.id}`
+          ),
       },
     ],
   },

@@ -25,6 +25,7 @@ const MyToys = () => {
         }
       });
   };
+
   return (
     <div className="overflow-x-auto my-bg p-8">
       <p className="mb-5 text-4xl text-center text-tdeep font-semibold">
@@ -55,6 +56,7 @@ const MyToys = () => {
             />
           ))}
         </tbody>
+        
       </table>
     </div>
   );
