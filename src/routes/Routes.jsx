@@ -7,6 +7,7 @@ import ErrorPage from "../pages/ErrorPage";
 import ToyDetails from "../pages/ToyDetails";
 import PrivateRoute from "./PrivateRoute";
 import AllToys from "../pages/AllToys";
+import AddToy from "../pages/AddToy";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,17 @@ const router = createBrowserRouter([
           fetch(
             `https://toy-marketplace-server-ten.vercel.app/toyDetails/${params.id}`
           ),
+      },
+      {
+        path: "myToys",
+      },
+      {
+        path: "addToy",
+        element: (
+          <PrivateRoute>
+            <AddToy />
+          </PrivateRoute>
+        ),
       },
     ],
   },
