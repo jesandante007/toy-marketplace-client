@@ -1,13 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import ToyRow from "../components/ToyRow";
+import { FaSearch } from "react-icons/fa";
 
 const AllToys = () => {
-  const toys = useLoaderData();
+  const data = useLoaderData();
+  const [toys, setToys] = useState(data);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const text = form.text.value;
+    const URL = `https://toy-marketplace-server-ten.vercel.app/toySearch?text=${text}`;
+
+    fetch(URL)
+      .then((res) => res.json())
+      .then((data) => setToys(data));
+  };
   return (
     <div className="overflow-x-auto my-bg p-8">
+      <form onSubmit={handleSubmit}>
+        <div className="lg:w-1/3 mx-auto mb-10 input-group">
+          <input
+            type="text"
+            name="text"
+            placeholder="Search by Name"
+            className="w-full h-14 rounded-xl shadow px-5"
+          />
+          <button type="submit" className="btn btn-ghost my-btn h-14 text-2xl">
+            <FaSearch />
+          </button>
+        </div>
+      </form>
       <table className="table table-zebra w-full">
-        {/* head */}
         <thead>
           <tr>
             <th></th>
@@ -16,8 +41,7 @@ const AllToys = () => {
             <th>Category</th>
             <th>Price</th>
             <th>In Stock</th>
-            <th>Action</th>
-            <th>Action</th>
+            <th>Details Info</th>
           </tr>
         </thead>
         <tbody>

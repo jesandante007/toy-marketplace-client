@@ -1,17 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ToyRow = ({ toy, index }) => {
   const { _id, name, seller, category, availableQuantity, price } = toy;
 
-  const handleDelete = (_id) => {
-    fetch(``, {
-        method: 'DELETE'
-    })
-      .then(res => res.json())
-      .then(data => console.log(data))
-  };
-
-  const handleUpdate = (_id) => {};
   return (
     <tr>
       <th>{index + 1}</th>
@@ -21,15 +13,9 @@ const ToyRow = ({ toy, index }) => {
       <td>${price}</td>
       <td>{availableQuantity}</td>
       <td>
-        <button className="btn btn-outline my-btn">Edit</button>
-      </td>
-      <td>
-        <button
-          onClick={() => handleDelete(_id)}
-          className="btn btn-outline btn-error normal-case"
-        >
-          Delete
-        </button>
+        <Link to={`/toyDetails/${_id}`}>
+          <button className="btn btn-outline my-btn">View Details</button>
+        </Link>
       </td>
     </tr>
   );

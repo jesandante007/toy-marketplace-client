@@ -53,7 +53,7 @@ const Login = () => {
       <div>
         <img src={img} />
       </div>
-      <div className="bg-gradient-to-br from-bdeep to-blight backdrop-blur-2xl p-12 rounded-xl space-y-5">
+      <div className="bg-gradient-to-br from-bdeep to-blight backdrop-blur-sm p-12 rounded-xl space-y-5">
         <p className="text-4xl text-tdeep font-medium pt-16">Sign In</p>
         <form onSubmit={handleSignIn} className="pt-10 space-y-5">
           <p className="text-error text-center font-semibold">{error}</p>
@@ -61,20 +61,20 @@ const Login = () => {
             type="email"
             name="email"
             placeholder="example@email.com"
-            className="w-full h-14 rounded-xl bg-inherit backdrop-blur-2xl px-5"
+            className="w-full h-14 rounded-xl shadow px-5"
             required
           />
           <input
             type="password"
             name="password"
             placeholder="Password"
-            className="w-full h-14 rounded-xl bg-inherit backdrop-blur-2xl px-5"
+            className="w-full h-14 rounded-xl shadow px-5"
             required
           />
           <div className="flex items-center gap-3 pb-5">
             <input
               type="checkbox"
-              className="checkbox bg-inherit backdrop-blur-2xl"
+              className="checkbox bg-white"
             />
             <span className="text-base">Remember me</span>
           </div>
