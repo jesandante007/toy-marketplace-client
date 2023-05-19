@@ -5,16 +5,31 @@ import MyToyRow from "../components/MyToyRow";
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
-  const URL = `http://localhost:5000/myToys?email=${user.email}`;
+  const [control, setControl] = useState(false);
+  const URL = `https://toy-marketplace-server-ten.vercel.app/myToys?email=${user.email}`;
 
   useEffect(() => {
     fetch(URL)
       .then((res) => res.json())
       .then((data) => setToys(data));
-  }, []);
+  }, [control]);
+
+  const handleDelete = (_id) => {
+    fetch(`https://toy-marketplace-server-ten.vercel.app/toyDelete/${_id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          setControl(!control);
+        }
+      });
+  };
   return (
     <div className="overflow-x-auto my-bg p-8">
-        <p className="mb-5 text-4xl text-center text-tdeep font-semibold">Collection of Your Toys</p>
+      <p className="mb-5 text-4xl text-center text-tdeep font-semibold">
+        Collection of Your Toys
+      </p>
       <table className="table table-zebra w-full">
         <thead>
           <tr>
@@ -32,7 +47,12 @@ const MyToys = () => {
         </thead>
         <tbody>
           {toys.map((toy, index) => (
-            <MyToyRow key={toy._id} toy={toy} index={index} />
+            <MyToyRow
+              key={toy._id}
+              toy={toy}
+              index={index}
+              handleDelete={handleDelete}
+            />
           ))}
         </tbody>
       </table>

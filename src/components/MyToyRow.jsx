@@ -1,7 +1,16 @@
 import React from "react";
 
-const MyToyRow = ({toy, index}) => {
-  const { _id, name, category, availableQuantity, price, rating, features, image } = toy;
+const MyToyRow = ({ toy, index, handleDelete }) => {
+  const {
+    _id,
+    name,
+    category,
+    availableQuantity,
+    price,
+    rating,
+    features,
+    image,
+  } = toy;
   return (
     <tr>
       <th>{index + 1}</th>
@@ -15,7 +24,14 @@ const MyToyRow = ({toy, index}) => {
       <td>
         <button className="btn btn-outline my-btn btn-sm">Update</button>
       </td>
-      <td><button className="btn btn-outline btn-error normal-case btn-sm">Delete</button></td>
+      <td>
+        <button
+          onClick={() => handleDelete(_id)}
+          className="btn btn-outline btn-error normal-case btn-sm"
+        >
+          Delete
+        </button>
+      </td>
     </tr>
   );
 };
