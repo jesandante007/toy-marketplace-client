@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import img from "../assets/images/addToy.png";
 import { toast } from "react-hot-toast";
-import useTitle from "../hooks/useTitlejs";
+import useTitle from "../hooks/useTitle.js";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);

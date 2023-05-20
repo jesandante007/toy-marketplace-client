@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import ToyRow from "../components/ToyRow";
 import { FaSearch } from "react-icons/fa";
-import useTitle from "../hooks/useTitlejs";
+import useTitle from "../hooks/useTitle.js";
 
 const AllToys = () => {
   const data = useLoaderData();

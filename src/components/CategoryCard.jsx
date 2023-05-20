@@ -19,7 +19,7 @@ const CategoryCard = ({ car }) => {
   };
 
   return (
-    <div className="card my-bg shadow-xl justify-between">
+    <div className="card my-bg shadow-md justify-between">
       <figure className="p-10">
         <img src={image} alt={name} className="rounded-xl" />
       </figure>

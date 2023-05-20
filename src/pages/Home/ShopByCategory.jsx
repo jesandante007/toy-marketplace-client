@@ -12,7 +12,7 @@ const ShopByCategory = () => {
   }, [activeTab])
   return (
     <div data-aos='flip-down' id="category">
-      <p className="text-center text-5xl text-tdeep font-semibold mt-20 mb-10">
+      <p className="text-center text-4xl lg:text-5xl text-tdeep font-semibold mt-20 mb-10">
         Shop By Category
       </p>
       <div className="my-bg p-5 lg:p-10">

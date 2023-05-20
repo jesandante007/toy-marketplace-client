@@ -3,7 +3,7 @@ import { AuthContext } from "../context/AuthProvider";
 import img from "../assets/images/addToy.png";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-hot-toast";
-import useTitle from "../hooks/useTitlejs";
+import useTitle from "../hooks/useTitle.js";
 
 const UpdateToy = () => {
   const { user } = useContext(AuthContext);

@@ -15,11 +15,11 @@ import img9 from "../../assets/cars/fire-truck-5.jpg";
 
 const Carousel = () => {
   return (
-    <div>
-      <p className="text-center text-5xl text-tdeep font-semibold mt-20 mb-10">
+    <div data-aos="flip-left">
+      <p className="text-center text-4xl lg:text-5xl text-tdeep font-semibold mt-20 mb-10">
         Top Selling Car's
       </p>
-      <div className="my-bg p-10" data-aos="flip-left">
+      <div className="my-bg p-5 lg:p-10">
         <Swiper
           slidesPerView={4}
           spaceBetween={30}
@@ -29,6 +29,24 @@ const Carousel = () => {
           autoplay={{
             delay: 2000,
             disableOnInteraction: true,
+          }}
+          breakpoints={{
+            "@0.00": {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            "@0.75": {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            "@1.00": {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            "@1.50": {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
           }}
           className="mySwiper"
         >

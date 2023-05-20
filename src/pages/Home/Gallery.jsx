@@ -13,7 +13,7 @@ import GalleryImg from "../../components/GalleryImg";
 const Gallery = () => {
   return (
     <>
-      <p className="text-center text-5xl text-tdeep font-semibold mt-20 mb-10">
+      <p className="text-center text-4xl lg:text-5xl text-tdeep font-semibold mt-20 mb-10">
         Gallery
       </p>
       <div className="my-bg grid grid-cols-1 lg:grid-cols-3 gap-10 p-10 lg:p-20">

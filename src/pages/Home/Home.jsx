@@ -2,8 +2,9 @@ import React from 'react';
 import Hero from './Hero';
 import Gallery from './Gallery';
 import ShopByCategory from './ShopByCategory';
-import useTitle from '../../hooks/useTitlejs';
+import useTitle from '../../hooks/useTitle.js';
 import Carousel from './Carousel';
+import Subscribe from './Subscribe';
 
 const Home = () => {
     useTitle('Home')
@@ -14,6 +15,7 @@ const Home = () => {
             <Gallery />
             <ShopByCategory />
             <Carousel />
+            <Subscribe />
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import img from "../assets/images/error.gif";
 import { Link } from "react-router-dom";
-import useTitle from "../hooks/useTitlejs";
+import useTitle from "../hooks/useTitle.js";
 
 const ErrorPage = () => {
   useTitle('Error')

@@ -3,7 +3,7 @@ import img from "../assets/images/image.png";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
-import useTitle from "../hooks/useTitlejs";
+import useTitle from "../hooks/useTitle.js";
 
 const Login = () => {
   const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);

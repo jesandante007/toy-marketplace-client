@@ -3,7 +3,7 @@ import logo from '../../assets/car.png'
 
 const Footer = () => {
   return (
-    <div className="my-bg mt-28">
+    <div className="my-bg mt-10 lg:mt-24">
       <footer className="footer p-10 pb-5 text-base-content container mx-auto">
         <div>
           <img src={logo} alt="logo" className="h-28" />

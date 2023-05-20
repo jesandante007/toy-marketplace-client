@@ -1,7 +1,7 @@
 import { Rating } from "@smastrom/react-rating";
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import useTitle from "../hooks/useTitlejs";
+import useTitle from "../hooks/useTitle.js";
 
 const ToyDetails = () => {
   const toy = useLoaderData();
