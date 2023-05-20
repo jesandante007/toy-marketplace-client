@@ -11,7 +11,7 @@ const ShopByCategory = () => {
       .then(data => setCategory(data))
   }, [activeTab])
   return (
-    <>
+    <div data-aos='flip-down' id="category">
       <p className="text-center text-5xl text-tdeep font-semibold mt-20 mb-10">
         Shop By Category
       </p>
@@ -50,7 +50,7 @@ const ShopByCategory = () => {
               }
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

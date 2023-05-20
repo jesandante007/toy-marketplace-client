@@ -2,12 +2,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import MyToyRow from "../components/MyToyRow";
 import Swal from "sweetalert2";
+import useTitle from "../hooks/useTitlejs";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [control, setControl] = useState(false);
   const [activeTab, setActiveTab] = useState("asc");
+  useTitle('My Toys')
   const URL = `https://toy-marketplace-server-ten.vercel.app/myToys?email=${user.email}&sort=${activeTab}`;
 
   useEffect(() => {

@@ -3,10 +3,12 @@ import { AuthContext } from "../context/AuthProvider";
 import img from "../assets/images/addToy.png";
 import { useLoaderData } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import useTitle from "../hooks/useTitlejs";
 
 const UpdateToy = () => {
   const { user } = useContext(AuthContext);
   const toy = useLoaderData();
+  useTitle('Update Toy')
   const {
     _id,
     name,

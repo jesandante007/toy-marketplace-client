@@ -2,11 +2,13 @@ import React, { useContext, useState } from "react";
 import img from "../assets/images/image.png";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
+import useTitle from "../hooks/useTitlejs";
 
 const Register = () => {
   const { createUser, updateUserData } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  useTitle('Register')
 
   const handleCreateUser = (event) => {
     event.preventDefault();

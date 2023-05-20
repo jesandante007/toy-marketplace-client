@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import img from "../assets/images/addToy.png";
 import { toast } from "react-hot-toast";
+import useTitle from "../hooks/useTitlejs";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
+  useTitle('Add Toy')
 
   const handleAddToy = (event) => {
     event.preventDefault();

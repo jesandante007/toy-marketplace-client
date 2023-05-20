@@ -3,6 +3,7 @@ import img from "../assets/images/image.png";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
+import useTitle from "../hooks/useTitlejs";
 
 const Login = () => {
   const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
@@ -10,6 +11,7 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
+  useTitle('Login')
 
   const handleSignIn = (event) => {
     event.preventDefault();

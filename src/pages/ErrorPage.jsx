@@ -1,8 +1,10 @@
 import React from "react";
 import img from "../assets/images/error.gif";
 import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitlejs";
 
 const ErrorPage = () => {
+  useTitle('Error')
   return (
     <div className="flex justify-center items-center h-screen">
       <div>

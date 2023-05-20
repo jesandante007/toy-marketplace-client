@@ -8,7 +8,7 @@ const Main = () => {
   return (
     <div className="font-poppins text-tlight">
       <Header />
-      <div className="container mx-auto">
+      <div className="container m-auto min-h-[calc(100vh-439px)]">
         <Outlet />
       </div>
       <Footer />

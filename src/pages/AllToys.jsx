@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import ToyRow from "../components/ToyRow";
 import { FaSearch } from "react-icons/fa";
+import useTitle from "../hooks/useTitlejs";
 
 const AllToys = () => {
   const data = useLoaderData();
   const [toys, setToys] = useState(data);
+  useTitle('All Toys')
 
   const handleSubmit = (event) => {
     event.preventDefault();

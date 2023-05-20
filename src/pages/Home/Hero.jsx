@@ -18,7 +18,11 @@ const Hero = () => {
             trucks, our selection will ignite your imagination and fuel hours of
             thrilling play.
           </p>
-          <button className="btn btn-ghost my-btn text-base">Discover Our Collection</button>
+          <a href="#category">
+            <button className="btn btn-ghost my-btn text-base">
+              Discover Our Collection
+            </button>
+          </a>
         </div>
       </div>
     </div>
