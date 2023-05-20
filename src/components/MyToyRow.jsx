@@ -11,7 +11,7 @@ const MyToyRow = ({ toy, index, handleDelete }) => {
     rating,
     features,
     image,
-  } = toy;
+  } = toy || {};
   return (
     <>
       <tr>

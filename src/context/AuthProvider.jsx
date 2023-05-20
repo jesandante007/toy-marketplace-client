@@ -1,5 +1,15 @@
 import React, { createContext, useEffect, useState } from "react";
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import {
+  GithubAuthProvider,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  getAuth,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  updateProfile,
+} from "firebase/auth";
 import app from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
@@ -18,10 +28,10 @@ const AuthProvider = ({ children }) => {
 
   const updateUserData = (name, photo) => {
     return updateProfile(auth.currentUser, {
-        displayName: name,
-        photoURL: photo
-    })
-  }
+      displayName: name,
+      photoURL: photo,
+    });
+  };
 
   const signIn = (email, password) => {
     setLoading(true);
@@ -30,13 +40,13 @@ const AuthProvider = ({ children }) => {
 
   const googleSignIn = () => {
     setLoading(true);
-    return signInWithPopup(auth, googleProvider)
-  }
+    return signInWithPopup(auth, googleProvider);
+  };
 
   const githubSignIn = () => {
     setLoading(true);
-    return signInWithPopup(auth, githubProvider)
-  }
+    return signInWithPopup(auth, githubProvider);
+  };
 
   const logOut = () => {
     setLoading(true);
@@ -48,6 +58,22 @@ const AuthProvider = ({ children }) => {
       console.log("logged in user inside auth state change", loggedUser);
       setUser(loggedUser);
       setLoading(false);
+      if (loggedUser && loggedUser.email) {
+        const currentUser = { email: loggedUser.email };
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            localStorage.setItem("toy-access-token", data.token);
+          });
+      } else {
+        localStorage.removeItem("toy-access-token");
+      }
     });
     return () => {
       unSubscribe();

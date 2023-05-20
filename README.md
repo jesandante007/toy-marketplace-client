@@ -5,12 +5,10 @@ TurboToyGarage is a web application built using React, Firebase, MongoDB, Tailwi
 ## Features
 
 - **Extensive Collection**: Explore a diverse collection of toy cars, carefully curated to cater to different interests and preferences.
-- **User Authentication**: Create an account, sign in securely, and enjoy personalized shopping experiences.
+- **User Authentication**: Create an account, sign in securely, and enjoy personalized shopping experiences. JWT is used for secure authentication and authorization.
 - **Product Listings**: Browse through various categories of toy cars, including sports cars, trucks, regular cars, mini fire trucks, and mini police cars.
 - **Product Details**: Get detailed information about each toy car, including the seller, name, category, price, available quantity, and features.
 - **Search and Filtering**: Easily find your desired toy car using the search functionality and filtering options.
-- **Shopping Cart**: Add your favorite toy cars to the cart, review your selections, and proceed to checkout.
-- **Secure Payment**: Enjoy a safe and secure payment process for your purchases.
 - **User Reviews and Ratings**: Read and provide reviews and ratings for the toy cars, helping other users make informed decisions.
 - **Responsive Design**: Experience seamless browsing across different devices and screen sizes.
 
@@ -19,7 +17,7 @@ TurboToyGarage is a web application built using React, Firebase, MongoDB, Tailwi
 - **Frontend**: React, React Router, Tailwind CSS, DaisyUI
 - **Backend**: Express.js
 - **Database**: MongoDB
-- **Authentication**: Firebase Authentication
+- **Authentication**: Firebase Authentication with JWT
 - **Hosting**: Firebase Hosting
 
 ## Acknowledgements

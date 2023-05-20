@@ -9,14 +9,19 @@ const MyToys = () => {
   const [toys, setToys] = useState([]);
   const [control, setControl] = useState(false);
   const [activeTab, setActiveTab] = useState("asc");
-  useTitle('My Toys')
+  useTitle("My Toys");
   const URL = `https://toy-marketplace-server-ten.vercel.app/myToys?email=${user.email}&sort=${activeTab}`;
 
   useEffect(() => {
-    fetch(URL)
+    fetch(URL, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("toy-access-token")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setToys(data));
-  }, [control, activeTab]);
+  }, [control, URL]);
 
   const handleDelete = (_id) => {
     Swal.fire({
