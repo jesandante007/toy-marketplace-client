@@ -101,8 +101,14 @@ const Header = () => {
               </ul>
             </div>
           ) : (
-            <Link to="/login" className="btn btn-ghost btn-circle text-xl p-3 my-btn tooltip tooltip-bottom inline-block" data-tip="Login">
-              <FaUserAlt />
+            <Link
+              to="/login"
+              className="tooltip tooltip-bottom"
+              data-tip="Login"
+            >
+              <button className="btn btn-ghost btn-circle text-2xl my-btn">
+                <FaUserAlt />
+              </button>
             </Link>
           )}
         </div>

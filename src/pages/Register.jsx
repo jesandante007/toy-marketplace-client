@@ -7,8 +7,10 @@ import useTitle from "../hooks/useTitle.js";
 const Register = () => {
   const { createUser, updateUserData } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const [check, setCheck] = useState(false)
   const navigate = useNavigate();
   useTitle('Register')
+  console.log(check);
 
   const handleCreateUser = (event) => {
     event.preventDefault();
@@ -86,6 +88,7 @@ const Register = () => {
             <input
               type="checkbox"
               className="checkbox bg-white shadow"
+              onClick={() => setCheck(!check)}
             />
             <span className="text-base">
               I agree with <span className="link">Terms & Conditions</span>
@@ -94,7 +97,8 @@ const Register = () => {
           <input
             type="submit"
             value="Create Account"
-            className="w-full h-14 text-xl my-btn rounded-xl"
+            className="w-full h-14 text-xl btn btn-ghost my-btn rounded-xl"
+            disabled = {!check}
           />
         </form>
         <p className="text-center">
