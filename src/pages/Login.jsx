@@ -11,7 +11,7 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
-  useTitle('Login')
+  useTitle("Login");
 
   const handleSignIn = (event) => {
     event.preventDefault();
@@ -74,10 +74,7 @@ const Login = () => {
             required
           />
           <div className="flex items-center gap-3 pb-5">
-            <input
-              type="checkbox"
-              className="checkbox bg-white"
-            />
+            <input type="checkbox" className="checkbox bg-white" />
             <span className="text-base">Remember me</span>
           </div>
           <input
@@ -97,15 +94,17 @@ const Login = () => {
           <FaGoogle className="w-10 h-10 p-2 rounded-full text-tdeep bg-gradient-to-br from-bdeep to-blight" />
           <span>Continue With Google</span>
         </button>
-        <button className="w-full h-14 rounded-xl my-btn normal-case text-xl flex items-center justify-center gap-3">
-          <FaGithub
-            onClick={handleGithubSignIn}
-            className="w-10 h-10 p-2 rounded-full text-tdeep bg-gradient-to-br from-bdeep to-blight"
-          />
+        <button
+          onClick={handleGithubSignIn}
+          className="w-full h-14 rounded-xl my-btn normal-case text-xl flex items-center justify-center gap-3"
+        >
+          <FaGithub className="w-10 h-10 p-2 rounded-full text-tdeep bg-gradient-to-br from-bdeep to-blight" />
           <span>Continue With Github</span>
         </button>
-        <p className="link text-center pt-10">
-          <Link to="/register">Don't have an account? Sign Up</Link>
+        <p className="text-center">
+          <Link to="/register" className="inline-block mt-10 underline">
+            Don't have an account? Sign Up
+          </Link>
         </p>
       </div>
     </div>

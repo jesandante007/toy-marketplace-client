@@ -97,8 +97,8 @@ const Register = () => {
             className="w-full h-14 text-xl my-btn rounded-xl"
           />
         </form>
-        <p className="link text-center pt-10">
-          <Link to="/login">Already have an account? Login</Link>
+        <p className="text-center">
+          <Link to="/login" className="inline-block mt-10 underline">Already have an account? Login</Link>
         </p>
       </div>
     </div>

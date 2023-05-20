@@ -10,6 +10,7 @@ import AllToys from "../pages/AllToys";
 import AddToy from "../pages/AddToy";
 import MyToys from "../pages/MyToys";
 import UpdateToy from "../pages/UpdateToy";
+import Blog from "../pages/Blog";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
             `https://toy-marketplace-server-ten.vercel.app/toyDetails/${params.id}`
           ),
       },
+      {
+        path: 'blog',
+        element: <Blog />
+      }
     ],
   },
 ]);

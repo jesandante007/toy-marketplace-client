@@ -3,6 +3,7 @@ import { AuthContext } from "../../context/AuthProvider";
 import { Link } from "react-router-dom";
 import ActiveLink from "../ActiveLink";
 import logo from "../../assets/car.png";
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -20,7 +21,7 @@ const Header = () => {
         <ActiveLink to="/">Home</ActiveLink>
       </li>
       <li>
-        <ActiveLink to='/allToys'>All Toys</ActiveLink>
+        <ActiveLink to="/allToys">All Toys</ActiveLink>
       </li>
       {user ? (
         <>
@@ -70,7 +71,7 @@ const Header = () => {
           </div>
           <Link className="flex items-center gap-1 text-2xl text-tdeep font-semibold">
             <img src={logo} alt="" className="h-12 rounded-full" />
-            <span>TurboToyGarage</span>
+            <span className="text-sm font-thin">TurboToyGarage</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -92,9 +93,7 @@ const Header = () => {
                 className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a className="justify-between">
-                    Profile
-                  </a>
+                  <a className="justify-between">Profile</a>
                 </li>
                 <li onClick={handleLogOut}>
                   <a>Logout</a>
@@ -102,9 +101,9 @@ const Header = () => {
               </ul>
             </div>
           ) : (
-            <button className="btn btn-outline text-base px-5 my-btn">
-              <Link to="/login">Login</Link>
-            </button>
+            <Link to="/login" className="btn btn-ghost btn-circle text-xl p-3 my-btn tooltip tooltip-bottom inline-block" data-tip="Login">
+              <FaUserAlt />
+            </Link>
           )}
         </div>
       </div>
