@@ -3,6 +3,7 @@ import Hero from './Hero';
 import Gallery from './Gallery';
 import ShopByCategory from './ShopByCategory';
 import useTitle from '../../hooks/useTitlejs';
+import Carousel from './Carousel';
 
 const Home = () => {
     useTitle('Home')
@@ -12,6 +13,7 @@ const Home = () => {
             <Hero />
             <Gallery />
             <ShopByCategory />
+            <Carousel />
         </div>
     );
 };

@@ -1,11 +1,11 @@
 import React from "react";
-import hero from "../../assets/images/hero.png";
+import hero from "../../assets/images/hero.jpg";
 
 const Hero = () => {
   return (
-    <div className="hero my-bg">
+    <div className="hero my-bg py-10">
       <div className="hero-content flex-col lg:flex-row">
-        <img src={hero} className="max-w-sm rounded-lg shadow-2xl" />
+        <img src={hero} className="w-full max-w-md rounded-lg shadow-2xl" />
         <div>
           <h1 className="text-5xl font-bold text-tdeep">
             Unleash the Thrill of Miniature Speed
