@@ -24,4 +24,4 @@ TurboToyGarage is a web application built using React, Firebase, MongoDB, Tailwi
 
 ## Acknowledgements
 
- - [TurboToyGarage Live Link ->](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [TurboToyGarage Live Link ->](https://toy-marketplace-259f8.web.app/)
