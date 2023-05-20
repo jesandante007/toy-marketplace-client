@@ -71,7 +71,7 @@ const Header = () => {
           </div>
           <Link className="flex items-center gap-1 text-2xl text-tdeep font-semibold">
             <img src={logo} alt="" className="h-12 rounded-full" />
-            <span className="text-sm font-thin">TurboToyGarage</span>
+            <span className="text-sm lg:text-xl font-thin">TurboToyGarage</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
