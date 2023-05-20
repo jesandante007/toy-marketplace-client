@@ -6,13 +6,14 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [control, setControl] = useState(false);
-  const URL = `https://toy-marketplace-server-ten.vercel.app/myToys?email=${user.email}`;
+  const [activeTab, setActiveTab] = useState("asc");
+  const URL = `https://toy-marketplace-server-ten.vercel.app/myToys?email=${user.email}&sort=${activeTab}`;
 
   useEffect(() => {
     fetch(URL)
       .then((res) => res.json())
       .then((data) => setToys(data));
-  }, [control]);
+  }, [control, activeTab]);
 
   const handleDelete = (_id) => {
     fetch(`https://toy-marketplace-server-ten.vercel.app/toyDelete/${_id}`, {
@@ -31,6 +32,24 @@ const MyToys = () => {
       <p className="mb-5 text-4xl text-center text-tdeep font-semibold">
         Collection of Your Toys
       </p>
+      <div className="btn-group flex justify-center items-center mb-5">
+        <button
+          onClick={() => setActiveTab("asc")}
+          className={`btn btn-ghost normal-case text-base ${
+            activeTab == "asc" ? "my-btn" : "my-bg"
+          }`}
+        >
+          Ascending
+        </button>
+        <button
+          onClick={() => setActiveTab("dsc")}
+          className={`btn btn-ghost normal-case text-base ${
+            activeTab == "dsc" ? "my-btn" : "my-bg"
+          }`}
+        >
+          Descending
+        </button>
+      </div>
       <table className="table table-zebra w-full">
         <thead>
           <tr>
@@ -56,7 +75,6 @@ const MyToys = () => {
             />
           ))}
         </tbody>
-        
       </table>
     </div>
   );
