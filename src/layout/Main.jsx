@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/shared/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/shared/Footer";
+import { Toaster } from "react-hot-toast";
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
         <Outlet />
       </div>
       <Footer />
+      <Toaster />
     </div>
   );
 };

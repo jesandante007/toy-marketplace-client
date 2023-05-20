@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import img from "../assets/images/addToy.png";
+import { toast } from "react-hot-toast";
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
@@ -38,7 +39,11 @@ const AddToy = () => {
       body: JSON.stringify(toyInfo),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if(data.insertedId) {
+          toast.success('Successfully added!')
+        }
+      });
   };
 
   return (

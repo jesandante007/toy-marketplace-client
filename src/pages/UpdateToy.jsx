@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../context/AuthProvider";
 import img from "../assets/images/addToy.png";
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 const UpdateToy = () => {
   const { user } = useContext(AuthContext);
@@ -50,7 +51,11 @@ const UpdateToy = () => {
       body: JSON.stringify(toyInfo),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if(data.modifiedCount > 0) {
+          toast.success('Successfully updated!')
+        }
+      });
   };
   return (
     <div className="my-bg grid grid-cols-1 lg:grid-cols-[1fr_2fr] items-center">
