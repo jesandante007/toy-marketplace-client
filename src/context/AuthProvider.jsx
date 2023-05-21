@@ -60,7 +60,7 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
       if (loggedUser && loggedUser.email) {
         const currentUser = { email: loggedUser.email };
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://toy-marketplace-server-ten.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
