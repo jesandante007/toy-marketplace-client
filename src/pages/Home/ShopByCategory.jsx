@@ -21,7 +21,7 @@ const ShopByCategory = () => {
             <button
               onClick={() => setActiveTab("Sports Car")}
               className={`btn btn-ghost normal-case text-xl ${
-                activeTab == "Sports Car" ? "my-btn" : ""
+                activeTab == "Sports Car" ? "my-btn" : "my-bg"
               }`}
             >
               Sports Car
@@ -29,7 +29,7 @@ const ShopByCategory = () => {
             <button
               onClick={() => setActiveTab("Truck")}
               className={`btn btn-ghost normal-case text-xl ${
-                activeTab == "Truck" ? "my-btn" : ""
+                activeTab == "Truck" ? "my-btn" : "my-bg"
               }`}
             >
               Truck
@@ -37,7 +37,7 @@ const ShopByCategory = () => {
             <button
               onClick={() => setActiveTab("Fire Truck")}
               className={`btn btn-ghost normal-case text-xl ${
-                activeTab == "Fire Truck" ? "my-btn" : ""
+                activeTab == "Fire Truck" ? "my-btn" : "my-bg"
               }`}
             >
               Fire Truck
